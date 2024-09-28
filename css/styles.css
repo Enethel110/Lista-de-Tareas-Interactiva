@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-color: #e2df9a; /* Color de fondo */
+    margin: 0;
+    padding: 20px; /* Espaciado alrededor */
+}
+
+h1 {
+    text-align: center; /* Centra el encabezado */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo del formulario */
+#tasks-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea siguiente */
+    justify-content: center; /* Centra los elementos */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#task-input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+    flex: 1; /* Permite que el input crezca */
+    min-width: 250px; /* Ancho mínimo */
+    max-width: 400px; /* Ancho máximo */
+    margin-right: 10px; /* Espaciado a la derecha */
+}
+
+button {
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo de la lista */
+#tasks-list {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    max-width: 800px; /* Ancho máximo de la lista */
+    margin: 0 auto; /* Centra la lista */
+}
+
+#tasks-list li {
+    background-color: #d9c020; /* Color de fondo de los elementos de lista */
+    margin: 10px 0; /* Espaciado entre elementos */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    #tasks-form {
+        flex-direction: column; /* Cambia la dirección del formulario en pantallas pequeñas */
+    }
+
+    #task-input {
+        margin-right: 0; /* Elimina margen derecho en móviles */
+        margin-bottom: 10px; /* Margen inferior en móviles */
+    }
+}
+
+/* Estilos para el mensaje de lista vacía */
+#empty {
+    text-align: center; /* Centra el texto */
+    color: gray; /* Color del texto */
+    margin-top: 20px; /* Margen superior */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Botón eliminar */
+li {
+    display: flex; /* Flex para alinear elementos */
+    justify-content: space-between; /* Espacio entre el texto y el botón */
+    margin-bottom: 10px; /* Espaciado entre elementos de lista */
+}
+
+.delete-button {
+    margin-left: 10px; /* Margen a la izquierda */
+    background-color: red; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.delete-button:hover {
+    background-color: darkred; /* Color más oscuro al pasar el ratón */
+}
+
+.completed {
+    text-decoration: line-through; /* Tachado para tareas completadas */
+    color: #1d1313; /* Color opcional para tareas completadas */
+}
+
+/* Modal Errores */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Z-index para superponerse */
+    left: 0; /* Alineación izquierda */
+    top: 0; /* Alineación superior */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Permite desplazamiento */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: white; /* Fondo blanco para el contenido del modal */
+    margin: 15% auto; /* Margen superior y centrado */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde */
+    width: 80%; /* Ancho del modal */
+    max-width: 300px; /* Ancho máximo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.close {
+    color: #aaa; /* Color del texto del botón de cerrar */
+    float: right; /* Alineación a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el ratón o enfocar */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.delete-button:disabled {
+    background-color: lightgray; /* Color de fondo cuando está desactivado */
+    cursor: not-allowed; /* Cambia el cursor */
+    color: darkgray; /* Color del texto cuando está desactivado */
+}

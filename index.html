@@ -1,0 +1,41 @@
+ <!--Autor: Carlos Enethel Mendoza Resendiza  -->
+
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Define que el idioma es español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace el diseño responsivo -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Enlace a la hoja de estilos -->
+    <link rel="icon" href="/img/lista.png" type="image/x-icon"> <!-- Enlace al icono -->
+    <title>Lista de Tareas</title> <!-- Título de la página -->
+</head>
+
+<body>
+
+    <h1>Lista de Tareas</h1> <!-- Encabezado principal -->
+
+    <div>
+        <form id="tasks-form"> <!-- Formulario para agregar tareas -->
+            <input type="text" id="task-input" placeholder="Nueva tarea"> <!-- Campo para nueva tarea -->
+            <button type="submit">Agregar</button> <!-- Botón para enviar la tarea -->
+        </form>
+    </div>
+    <ul id="tasks-list"> <!-- Lista donde se mostrarán las tareas -->
+    </ul>
+
+    <div id="empty">
+        <p>No tienes tareas pendientes...</p>
+    </div>
+
+    <div id="modal" class="modal"> <!-- Modal para mensajes -->
+        <div class="modal-content"> <!-- Contenido del modal -->
+            <span id="close-modal" class="close">&times;</span> <!-- Botón para cerrar el modal -->
+            <p id="modal-message"></p> <!-- Mensaje que se mostrará en el modal -->
+        </div>
+    </div>
+
+    <script src="js/app.js"></script> <!-- Enlace al archivo JavaScript -->
+    
+</body>
+</html>
