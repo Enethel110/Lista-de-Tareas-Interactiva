@@ -9,10 +9,10 @@ Instrucciones claras sobre cómo ejecutar la aplicación.
 	Luego, haz clic en el archivo index.html, que se abrirá en tu navegador predeterminado. ¡Y listo! Ya podrás utilizar la aplicación.
 
 
-![Imangen 1](https://imgs.search.brave.com/tcbOWTWYPXv0iubFzOpyitsHgOlEGr9LEvjD6vy4aIU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbmRp/ZWhveS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjMvMDEv/cHRhemV0YS5qcGc)
-![Imangen 2](URL-de-la-imagen)
-![Imangen 3](URL-de-la-imagen)
-![Imangen 4](URL-de-la-imagen)
+![Imangen 1](https://github.com/Enethel110/Lista-de-Tareas-Interactiva/blob/main/img/1.png)
+![Imangen 2](https://github.com/Enethel110/Lista-de-Tareas-Interactiva/blob/main/img/2.png)
+![Imangen 3](https://github.com/Enethel110/Lista-de-Tareas-Interactiva/blob/main/img/3.png)
+![Imangen 4](https://github.com/Enethel110/Lista-de-Tareas-Interactiva/blob/main/img/4.png)
 
 
 
