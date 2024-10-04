@@ -1,110 +1,153 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif; /* Fuente general */
-    background-color: #e2df9a; /* Color de fondo */
+    font-family: 'Quicksand', sans-serif; /* Fuente más moderna */
+    background-color: #f4f7f6; /* Fondo suave gris claro */
     margin: 0;
-    padding: 20px; /* Espaciado alrededor */
+    padding: 20px;
+    color: #333; /* Color de texto más suave */
 }
 
+/* Encabezado */
 h1 {
-    text-align: center; /* Centra el encabezado */
-    color: #333; /* Color del texto */
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem; /* Tamaño grande para destacar */
+    margin-bottom: 20px;
+    font-weight: 600; /* Peso de fuente para mayor énfasis */
 }
 
 /* Estilo del formulario */
 #tasks-form {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea siguiente */
-    justify-content: center; /* Centra los elementos */
-    margin-bottom: 20px; /* Espaciado inferior */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaciado entre elementos */
+    margin-bottom: 20px;
 }
 
 #task-input {
-    padding: 10px;
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 4px; /* Bordes redondeados */
-    flex: 1; /* Permite que el input crezca */
-    min-width: 250px; /* Ancho mínimo */
-    max-width: 400px; /* Ancho máximo */
-    margin-right: 10px; /* Espaciado a la derecha */
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#task-input:focus {
+    border-color: #4CAF50; /* Borde verde en foco */
+    outline: none; /* Elimina el contorno */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2); /* Sombra suave verde */
 }
 
 button {
-    padding: 10px 15px; /* Espaciado interno */
-    background-color: #28a745; /* Color de fondo verde */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 button:hover {
-    background-color: #218838; /* Color más oscuro al pasar el ratón */
+    background-color: #45a049; /* Color verde más oscuro al pasar */
 }
 
 /* Estilo de la lista */
 #tasks-list {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    max-width: 800px; /* Ancho máximo de la lista */
-    margin: 0 auto; /* Centra la lista */
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Aumenta el espacio entre las tareas */
+    font-family: 'Merriweather', sans-serif; /* Tipografía más moderna */
+    font-weight: 400; /* Peso de fuente normal */
+    line-height: 1.6; /* Mejora el interlineado para mayor legibilidad */
+    color: #333; /* Color de texto más suave */
 }
 
 #tasks-list li {
-    background-color: #d9c020; /* Color de fondo de los elementos de lista */
-    margin: 10px 0; /* Espaciado entre elementos */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #fff;
+    padding: 15px 20px; /* Ajustamos el padding para mayor espacio */
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1.125rem; /* Tamaño de texto ligeramente mayor */
+    cursor: pointer;
+    font-weight: 500; /* Peso de fuente ligeramente más grueso */
+    letter-spacing: 0.5px; /* Espaciado de letras para una apariencia más limpia */
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-    #tasks-form {
-        flex-direction: column; /* Cambia la dirección del formulario en pantallas pequeñas */
-    }
+#tasks-list li:hover {
+    transform: translateY(-2px); /* Efecto de elevarse al pasar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más marcada */
+}
 
-    #task-input {
-        margin-right: 0; /* Elimina margen derecho en móviles */
-        margin-bottom: 10px; /* Margen inferior en móviles */
-    }
+/* Para las tareas completadas */
+.completed {
+    text-decoration: line-through;
+    color: #7f8c8d; /* Gris más suave para tareas completadas */
+    font-weight: 300; /* Fuente más delgada para las tareas completadas */
+}
+
+/* Estilo para los botones de eliminar */
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Hacemos el texto en el botón más grueso */
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
 }
 
 /* Estilos para el mensaje de lista vacía */
 #empty {
-    text-align: center; /* Centra el texto */
-    color: gray; /* Color del texto */
-    margin-top: 20px; /* Margen superior */
-    font-size: 18px; /* Tamaño de fuente */
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-top: 40px;
 }
 
-/* Botón eliminar */
-li {
-    display: flex; /* Flex para alinear elementos */
-    justify-content: space-between; /* Espacio entre el texto y el botón */
-    margin-bottom: 10px; /* Espaciado entre elementos de lista */
+/* Responsivo */
+@media (max-width: 600px) {
+    #tasks-list li {
+        font-size: 1rem; /* Reduce el tamaño en pantallas pequeñas */
+        padding: 12px; /* Ajusta el padding para móviles */
+    }
+
+    #tasks-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #task-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }
 
-.delete-button {
-    margin-left: 10px; /* Margen a la izquierda */
-    background-color: red; /* Color de fondo rojo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    padding: 5px 10px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-.delete-button:hover {
-    background-color: darkred; /* Color más oscuro al pasar el ratón */
-}
-
-.completed {
-    text-decoration: line-through; /* Tachado para tareas completadas */
-    color: #1d1313; /* Color opcional para tareas completadas */
-}
-
-/* Modal Errores */
 .modal {
     display: none; /* Ocultar por defecto */
     position: fixed; /* Posición fija */
@@ -141,8 +184,10 @@ li {
     cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
+/* Estilos para el botón eliminar cuando está desactivado */
 .delete-button:disabled {
-    background-color: lightgray; /* Color de fondo cuando está desactivado */
-    cursor: not-allowed; /* Cambia el cursor */
-    color: darkgray; /* Color del texto cuando está desactivado */
+    background-color: #dcdcdc;
+    color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
 }
